@@ -165,7 +165,7 @@ export default function CRFForm({ crfOutput }: CRFFormProps) {
       )[salesPoint1Selected],
       salesPoint1Selected
     );
-    const salesPoint1Match = salesPoint1Value.match(/キャッチ：(.*?)\n(.*)/s);
+    const salesPoint1Match = salesPoint1Value.match(/キャッチ：(.*?)\n([\s\S]*)/);
     const salesPoint1Catch = salesPoint1Match ? salesPoint1Match[1] : "";
     const salesPoint1Desc = salesPoint1Match ? salesPoint1Match[2] : "";
 
